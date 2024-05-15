@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "author": "Giuliana Gralha",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 57.6, "left": 100.84, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -114.9, "left": 129, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:CLK", "red", [ "v19.2", "h-86.4", "v278.4", "h163.2", "v-9.6" ] ],
+    [ "dht1:GND", "esp:D0", "black", [ "v28.8", "h67.2", "v220.8" ] ],
+    [ "dht1:SDA", "esp:2", "green", [ "v38.4", "h67.3", "v38.4" ] ]
+  ],
+  "dependencies": {}
+}
